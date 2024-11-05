@@ -7,6 +7,8 @@
     <title>Inven-SB</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('backend/assets/images/logos/favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('backend/assets/css/styles.min.css') }}"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.min.css">
+    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css " rel="stylesheet">
     {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> --}}
 </head>
 
@@ -20,9 +22,9 @@
         <!--  Main wrapper -->
         <div class="body-wrapper">
             <!--  Header Start -->
-           @include('template.atas')
+            @include('template.atas')
             <!--  Header End -->
-           @include('template.konten')
+            @include('template.konten')
         </div>
     </div>
     <script src="{{ asset('backend/assets/libs/jquery/dist/jquery.min.js') }}"></script>
@@ -32,6 +34,10 @@
     <script src="{{ asset('backend/assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
     <script src="{{ asset('backend/assets/libs/simplebar/dist/simplebar.js') }}"></script>
     <script src="{{ asset('backend/assets/js/dashboard.js') }}"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js "></script>
+    @yield('script')
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script>
