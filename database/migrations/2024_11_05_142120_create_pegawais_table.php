@@ -15,10 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('NIP');
             $table->string('nama');
+            $table->string('departemen_id');
             $table->string('jabatan_id');
-            $table->integer('no_telp');
-            $table->string('agama');
-            $table->string('alamat');
+            $table->enum('jenis_kelamin',['Laki-laki', 'Perempuan'])->default('Laki-laki');
+            $table->string('tgl_lahir');
+            $table->string('email');
+            $table->string('telepon');
+            $table->enum('status', ['Kontrak', 'Karyawan-Tetap', 'Part-Time', 'Magang'])->default('Kontrak');
             $table->text('foto')->nullable();
             $table->timestamps();
         });

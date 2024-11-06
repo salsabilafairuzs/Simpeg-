@@ -1,29 +1,21 @@
 @extends('template.template')
 @section('konten')
     <style>
-        /* Gaya untuk tabel */
         .table {
             border-collapse: collapse;
-            /* Menggabungkan border */
             width: 100%;
-            /* Lebar tabel 100% */
             border: 1px solid #dee2e6;
-            /* Garis di sekitar tabel */
         }
 
         .table th,
         .table td {
             border: 1px solid #dee2e6;
-            /* Warna border untuk sel */
             padding: 10px;
-            /* Jarak dalam sel */
             text-align: center;
-            /* Teks di tengah */
         }
 
         .table th {
             background-color: #f8f9fa;
-            /* Warna latar belakang untuk header */
         }
     </style>
     <div class="row">
@@ -42,7 +34,6 @@
                                 <tr>
                                     <th class="border-bottom-0" width="2%">
                                         No
-                                        {{-- <h6 class="fw-semibold mb-0 text-center">No</h6> --}}
                                     </th>
                                     <th class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0 text-center">Jabatan</h6>
@@ -111,7 +102,11 @@
         {data: 'jabatan'},
         {data: 'gaji'},
         {data: 'edit', searchable: false},
-        ]
+        ],
+        createdRow: function (row, data, dataIndex) {
+            $(row).find('td:eq(1)').addClass('text-center');
+            $(row).find('td:eq(2)').addClass('text-center');
+        }
     });
 
         function modalJabatan(){
@@ -231,6 +226,5 @@
                     }
                 })
             }
-
     </script>
 @endsection
