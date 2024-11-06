@@ -46,16 +46,16 @@ class DummySeeder extends Seeder
 
         for ($i = 0; $i < 50; $i++) {
             Pegawai::create([
-                'NIP' => $faker->unique()->numerify('#####'), // Menghasilkan NIP yang unik
-                'nama' => $faker->name, // Menghasilkan nama acak
-                'departemen_id' => $faker->numberBetween(1, 2), // Menghasilkan ID departemen acak, sesuaikan dengan data di tabel departemen
-                'jabatan_id' => $faker->numberBetween(1, 2), // Menghasilkan ID jabatan acak, sesuaikan dengan data di tabel jabatan
-                'jenis_kelamin' => $faker->randomElement(['Laki-laki', 'Perempuan']), // Menghasilkan jenis kelamin acak
-                'tgl_lahir' => $faker->date('d-m-Y', 'now'), // Menghasilkan tanggal lahir
-                'email' => $faker->unique()->safeEmail, // Menghasilkan email yang unik
-                'telepon' =>$faker->numerify('08#########'), // Menghasilkan nomor telepon acak
-                'status' => $faker->randomElement(['Kontrak', 'Karyawan-Tetap', 'Part-Time', 'Magang']), // Menghasilkan status acak
-                'foto' => $faker->imageUrl(640, 480, 'people', true), // Menghasilkan URL gambar acak
+                'NIP' => $faker->unique()->numerify('#####'), 
+                'nama' => $faker->name, 
+                'departemen_id' => $faker->numberBetween(1, 2), 
+                'jabatan_id' => $faker->numberBetween(1, 2), 
+                'jenis_kelamin' => $faker->randomElement(['Laki-laki', 'Perempuan']),
+                'tgl_lahir' => $faker->date('d-m-Y', 'now'),
+                'email' => $faker->unique()->safeEmail,
+                'telepon' =>$faker->numerify('08#########'), 
+                'status' => $faker->randomElement(['Kontrak', 'Karyawan-Tetap', 'Part-Time', 'Magang']), 
+                'foto' => $faker->imageUrl(640, 480, 'people', true),
             ]);
         }
     }

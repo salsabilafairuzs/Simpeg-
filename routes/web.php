@@ -22,6 +22,4 @@ Route::middleware('auth')->group(function () {
     Route::get('/',[dashboardController::class,'index']);
 });
 
-
-
 require __DIR__.'/auth.php';
