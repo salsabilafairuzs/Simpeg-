@@ -28,7 +28,6 @@ class DummySeeder extends Seeder
         $user->password = bcrypt('123456');
         $user->save();
 
-
         $jabatan2 = new Jabatan();
         $jabatan2->jabatan = 'Sales';
         $jabatan2->gaji = 10000000;

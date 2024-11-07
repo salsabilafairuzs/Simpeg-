@@ -39,19 +39,16 @@
             padding: 0.375rem; 
         }
     </style>
-
     <div class="row">
         <div class="col-lg-12 d-flex align-items-stretch">
             <div class="card w-100">
                 <div class="card-body p-4">
                     <h5 class="card-title fw-semibold mb-4">Dashboard</h5>
                     <div class="container-fluid">
-                        <!--  Row 1 -->
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="row">
                                   <div class="col-lg-12">
-                                    <!-- Yearly Breakup -->
                                     <div class="card overflow-hidden">
                                       <div class="card-body p-4">
                                         <h5 class="card-title mb-9 fw-semibold">Jumlah Departemen</h5>
@@ -60,21 +57,16 @@
                                             <h4 class="fw-semibold mb-3">{{ $departemen }}</h4>
                                             <div class="d-flex align-items-center mb-3">
                                             </div>
-                                           
                                           </div>
-                                         
                                         </div>
                                       </div>
                                     </div>
                                   </div>
-    
                                 </div>
                               </div>
-
                           <div class="col-lg-4">
                             <div class="row">
                               <div class="col-lg-12">
-                                <!-- Yearly Breakup -->
                                 <div class="card overflow-hidden">
                                   <div class="card-body p-4">
                                     <h5 class="card-title mb-9 fw-semibold">Jumlah Jabatan</h5>
@@ -83,20 +75,16 @@
                                         <h4 class="fw-semibold mb-3">{{ $jabatan }}</h4>
                                         <div class="d-flex align-items-center mb-3">
                                         </div>
-                                       
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-
                             </div>
                           </div>
-
                           <div class="col-lg-4">
                             <div class="row">
                               <div class="col-lg-12">
-                                <!-- Yearly Breakup -->
                                 <div class="card overflow-hidden">
                                   <div class="card-body p-4">
                                     <h5 class="card-title mb-9 fw-semibold">Jumlah Pegawai</h5>
@@ -105,22 +93,17 @@
                                         <h4 class="fw-semibold mb-3">{{ $pegawai }}</h4>
                                         <div class="d-flex align-items-center mb-3">
                                         </div>
-                                       
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-
                             </div>
                           </div>
-
-
                         </div>
                       </div>
                 </div>
             </div>
         </div>
     </div>
-
 @endsection

@@ -39,7 +39,6 @@
             padding: 0.375rem; 
         }
     </style>
-
     <div class="row">
         <div class="col-lg-12 d-flex align-items-stretch">
             <div class="card w-100">
@@ -68,7 +67,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Data akan dimuat di sini menggunakan DataTables -->
                             </tbody>
                         </table>
                     </div>
@@ -76,8 +74,6 @@
             </div>
         </div>
     </div>
-
-    {{-- Modal Baru --}}
     <div class="modal fade" id="modalPegawai" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -231,7 +227,7 @@
                 ],
                 createdRow: function (row, data, dataIndex) {
                     $(row).find('td').each(function(index) {
-                        if (index > 0) { // Mulai dari kolom kedua
+                        if (index > 0) { 
                             $(this).addClass('text-center');
                         }
                     });
@@ -308,13 +304,13 @@
                 $('input[name="nip"]').val(data.data.NIP);
                 $('input[name="_method"]').val('PATCH')
                 $('input[name="nama"]').val(data.data.nama);
-                $('select[name="departemen"]').val(data.data.departemen_id).trigger('change'); // Update select2
-                $('select[name="jabatan"]').val(data.data.jabatan_id).trigger('change'); // Update select2
+                $('select[name="departemen"]').val(data.data.departemen_id).trigger('change'); 
+                $('select[name="jabatan"]').val(data.data.jabatan_id).trigger('change'); 
                 $('select[name="jenis_kelamin"]').val(data.data.jenis_kelamin);
                 $('input[name="tgl_lahir"]').val(data.data.tgl_lahir);
                 $('input[name="email"]').val(data.data.email);
                 $('input[name="telepon"]').val(data.data.telepon);
-                $('select[name="status"]').val(data.data.status).trigger('change'); // Update select2
+                $('select[name="status"]').val(data.data.status).trigger('change'); 
             });
         }
 

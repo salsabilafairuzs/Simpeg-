@@ -105,7 +105,7 @@ class PegawaiController extends Controller
                 $file->move(public_path('storage/foto'), $filename); 
                 $pegawai->foto = $filename;
             } else {
-                $pegawai->foto = null; // Atau tetap menggunakan foto yang ada
+                $pegawai->foto = null; 
             }
 
             $pegawai->save();
@@ -219,7 +219,7 @@ class PegawaiController extends Controller
     if ($pegawai->foto) {
         $fotoPath = public_path('storage/foto/' . $pegawai->foto);
         if (file_exists($fotoPath)) {
-            unlink($fotoPath); // Menghapus file foto
+            unlink($fotoPath); 
         }
     }
 
